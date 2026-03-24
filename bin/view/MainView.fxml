@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10; -fx-background-color: #ecf0f1;">
+          <Button fx:id="logoutButton" text="Déconnexion" onAction="#logout" visible="false" styleClass="button-danger"/>
+      </HBox>
+   </top>
+   <center>
+      <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            
+            <Tab text="Tables" fx:id="tablesTab">
+               <content>
+                  <fx:include fx:id="tablesView" source="TablesView.fxml"/>
+               </content>
+            </Tab>
+
+            <Tab text="Commander" fx:id="ordersTab">
+               <content>
+                  <fx:include fx:id="ordersView" source="OrderView.fxml"/>
+               </content>
+            </Tab>
+
+            <Tab text="Suivi Cuisine" fx:id="suiviTab">
+               <content>
+                  <fx:include source="CommandesView.fxml"/>
+               </content>
+            </Tab>
+
+            <Tab text="Réservations" fx:id="reservationsTab">
+               <content>
+                  <fx:include source="ReservationView.fxml"/>
+               </content>
+            </Tab>
+            
+            <Tab text="Menu" fx:id="menuTab">
+               <content>
+                  <fx:include source="MenuView.fxml"/>
+               </content>
+            </Tab>
+            
+            <Tab text="Clients" fx:id="clientsTab">
+               <content>
+                  <fx:include source="ClientsView.fxml"/>
+               </content>
+            </Tab>
+            
+            <Tab text="Connexion" fx:id="loginTab">
+               <content>
+                  <fx:include fx:id="loginView" source="LoginView.fxml"/>
+               </content>
+            </Tab>
+
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

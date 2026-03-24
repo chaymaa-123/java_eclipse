@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController" 
+      alignment="CENTER" spacing="15" style="-fx-padding: 40; -fx-background-color: white;">
+    
+    <Label text="Connexion Personnel" styleClass="header-label"/>
+    
+    <VBox spacing="5" maxWidth="300">
+        <Label text="Email :"/>
+        <TextField fx:id="emailField" promptText="exemple@resto.com"/>
+    </VBox>
+    
+    <VBox spacing="5" maxWidth="300">
+        <Label text="Mot de passe :"/>
+        <PasswordField fx:id="passwordField" promptText="******"/>
+    </VBox>
+    
+    <Button text="Se Connecter" onAction="#handleLogin" styleClass="button" maxWidth="300"/>
+    <Label fx:id="errorLabel" text="" style="-fx-text-fill: red;"/>
+    
+</VBox>

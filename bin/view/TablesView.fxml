@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15.0" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TablesController">
+    
+    <Label text="Gestion de la Salle" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    
+    <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #ecf0f1; -fx-padding: 15; -fx-background-radius: 5;">
+        <children>
+            <Label text="Nouvelle Table : " style="-fx-font-weight: bold;"/>
+            <TextField fx:id="tfNumero" promptText="Numéro (ex: 10)" prefWidth="100.0" />
+            <TextField fx:id="tfCapacite" promptText="Capacité (ex: 4)" prefWidth="100.0" />
+            <Button onAction="#ajouterTable" text="Ajouter" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-cursor: hand; -fx-font-weight: bold;" />
+        </children>
+    </HBox>
+
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+        <content>
+            <FlowPane fx:id="tablesContainer" hgap="20" vgap="20" style="-fx-padding: 10; -fx-background-color: transparent;"/>
+        </content>
+    </ScrollPane>
+</VBox>
